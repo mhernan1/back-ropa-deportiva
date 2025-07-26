@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderNumber": {
+      "type": "string",
+      "required": true
+    },
+    "custumer": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "statusOrder": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "procesado",
+        "completado",
+        "cancelado"
+      ]
+    },
+    "Total": {
+      "type": "decimal",
+      "required": true
+    },
+    "shopingAndress": {
+      "type": "text",
+      "required": true
+    },
+    "paymentmethods": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.orderitems"
+    }
+  }
+}
