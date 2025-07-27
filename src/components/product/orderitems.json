@@ -1,11 +1,12 @@
 {
   "collectionName": "components_product_orderitems",
   "info": {
-    "displayName": "Orderitems"
+    "displayName": "Orderitems",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "quality": {
+    "quantity": {
       "type": "integer",
       "required": true
     },
@@ -13,9 +14,9 @@
       "type": "decimal",
       "required": true
     },
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::product.product"
     }
   }

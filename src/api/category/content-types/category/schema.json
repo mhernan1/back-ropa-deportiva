@@ -15,7 +15,7 @@
       "type": "string",
       "required": true
     },
-    "slut": {
+    "slug": {
       "type": "uid",
       "targetField": "name",
       "required": true

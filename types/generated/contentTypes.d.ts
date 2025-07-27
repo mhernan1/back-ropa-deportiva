@@ -391,7 +391,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'api::product.product'
     >;
     publishedAt: Attribute.DateTime;
-    slut: Attribute.UID<'api::category.category', 'name'> & Attribute.Required;
+    slug: Attribute.UID<'api::category.category', 'name'> & Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::category.category',
@@ -446,6 +446,7 @@ export interface ApiOrderOrder extends Schema.CollectionType {
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
+    description: '';
     displayName: 'Product';
     pluralName: 'products';
     singularName: 'product';
@@ -474,7 +475,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     oldprice: Attribute.Decimal;
     price: Attribute.Decimal & Attribute.Required;
     publishedAt: Attribute.DateTime;
-    slug: Attribute.UID<'api::product.product', 'name'> & Attribute.Required;
+    slug: Attribute.UID<'api::product.product', 'name'>;
     stock: Attribute.Integer & Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<

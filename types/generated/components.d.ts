@@ -3,16 +3,17 @@ import type { Attribute, Schema } from '@strapi/strapi';
 export interface ProductOrderitems extends Schema.Component {
   collectionName: 'components_product_orderitems';
   info: {
+    description: '';
     displayName: 'Orderitems';
   };
   attributes: {
     price: Attribute.Decimal & Attribute.Required;
-    product: Attribute.Relation<
+    products: Attribute.Relation<
       'product.orderitems',
-      'oneToOne',
+      'oneToMany',
       'api::product.product'
     >;
-    quality: Attribute.Integer & Attribute.Required;
+    quantity: Attribute.Integer & Attribute.Required;
   };
 }
 
